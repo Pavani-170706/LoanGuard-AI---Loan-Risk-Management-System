@@ -1,0 +1,84 @@
+{
+    "best_model": "XGBoost (Tuned)",
+    "test_accuracy": 0.9175,
+    "test_accuracy_percent": 91.75,
+    "train_rows": 4800,
+    "test_rows": 1200,
+    "number_of_features": 53,
+    "leakage_columns_removed": [
+        "Default_Flag",
+        "Default_Probability_Percent",
+        "Risk_Score",
+        "Risk_Level",
+        "Recommended_Decision_Manual Review",
+        "Recommended_Decision_Reject",
+        "Application_Status_Rejected",
+        "Loan_Status_Defaulted"
+    ],
+    "logistic_regression_best_params": {
+        "C": 2,
+        "penalty": "l1"
+    },
+    "decision_tree_best_params": {
+        "criterion": "gini",
+        "max_depth": 8,
+        "min_samples_leaf": 20
+    },
+    "random_forest_best_params": {
+        "max_depth": 12,
+        "max_features": "sqrt",
+        "min_samples_leaf": 5,
+        "n_estimators": 200
+    },
+    "xgboost_best_params": {
+        "learning_rate": 0.05,
+        "max_depth": 3,
+        "n_estimators": 300
+    },
+    "model_comparison": [
+        {
+            "Model": "XGBoost (Tuned)",
+            "Train Accuracy": 0.95125,
+            "Test Accuracy": 0.9175,
+            "Overfit Gap": 0.03375000000000006,
+            "Precision": 0.8976190476190476,
+            "Recall": 0.8706697459584296,
+            "F1 Score": 0.8839390386869871,
+            "ROC-AUC": 0.9760411428709076,
+            "CV Accuracy": 0.9135416666666667
+        },
+        {
+            "Model": "Logistic Regression (Tuned)",
+            "Train Accuracy": 0.92125,
+            "Test Accuracy": 0.9158333333333334,
+            "Overfit Gap": 0.005416666666666625,
+            "Precision": 0.8933649289099526,
+            "Recall": 0.8706697459584296,
+            "F1 Score": 0.8818713450292398,
+            "ROC-AUC": 0.9761555624474949,
+            "CV Accuracy": 0.9172916666666666
+        },
+        {
+            "Model": "Random Forest (Tuned)",
+            "Train Accuracy": 0.971875,
+            "Test Accuracy": 0.905,
+            "Overfit Gap": 0.06687500000000002,
+            "Precision": 0.8899755501222494,
+            "Recall": 0.8406466512702079,
+            "F1 Score": 0.8646080760095012,
+            "ROC-AUC": 0.9697330109511578,
+            "CV Accuracy": 0.90375
+        },
+        {
+            "Model": "Decision Tree (Tuned)",
+            "Train Accuracy": 0.9095833333333333,
+            "Test Accuracy": 0.8741666666666666,
+            "Overfit Gap": 0.03541666666666665,
+            "Precision": 0.8357142857142857,
+            "Recall": 0.8106235565819861,
+            "F1 Score": 0.8229777256740914,
+            "ROC-AUC": 0.9355245685930308,
+            "CV Accuracy": 0.8764583333333332
+        }
+    ]
+}
